@@ -32,7 +32,7 @@ body{
     z-index: 9;
     .logo{
         width: 8rem;
-        height: 8rem;
+        height: 100%;
         
     }
     .links-container{
@@ -50,6 +50,19 @@ body{
 
 }
 
+.btn{
+    padding: 10px 20px;
+    border-radius: 10px;
+    background:rgba(255,255,255,.7);
+    color: #000;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+.dark{
+    background: #1b1b1b;
+    color: #fff;
+}
+
 .header{
     margin-top: 60px;
     width: 100%;
@@ -61,14 +74,7 @@ body{
     align-items: center;
     .content{
         text-align: center;
-        .btn{
-            padding: 10px 20px;
-            border-radius: 10px;
-            background:rgba(255,255,255,.7);
-            color: #000;
-            text-decoration: none;
-            text-transform: capitalize;
-        }
+        
         .heading{
             color: #000;
             text-transform: capitalize;
@@ -95,6 +101,17 @@ body{
     display: grid;
     grid-template-columns: repeat(2,1fr);
     grid-gap:80px;
+    .blog-image{
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        border-radius: 10px;
+        margin-bottom: 4rem;
+    }
+    .blog-overview{
+        margin: 10px 0 20px;
+        line-height: 30px;
+    }
 }
 
 

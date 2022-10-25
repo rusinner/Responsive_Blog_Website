@@ -5,3 +5,6 @@ editor.css.map
 editor.css
 home.css.map
 home.css
+package.json
+package-lock.json
+node_modules

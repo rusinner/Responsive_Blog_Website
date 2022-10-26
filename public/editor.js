@@ -39,7 +39,7 @@ const  uploadImage =  (uploadFile , uploadType) => {
             
         });
     }else{
-        alert('uload image only');
+        alert('upload image only');
     }
 }
 
@@ -56,7 +56,7 @@ publishBtn.addEventListener('click',() => {
     if(articleField.value.length && blogTitleField.value.length){
         //genarate id
         let letters = 'abcdefghijklmnopqrstuvwxyz';
-        let blogTitle = blogTitleField.split(' ').join( '-');
+        let blogTitle = blogTitleField.value.split(' ').join( '-');
         let id = '';
         for (let i = 0; i < 4; i++){
             id += letters[Math.floor(Math.random() * letters.length)];
@@ -64,7 +64,7 @@ publishBtn.addEventListener('click',() => {
 
         //setting up doc name
         let docName = `${blogTitle}-${id}`;
-        let data = new DataTransfer(); // for published at info
+        let date = new DataTransfer(); // for published at info
 
         //acess firestore with db variable
         db.collection('blogs').doc(docName).set({
@@ -77,7 +77,7 @@ publishBtn.addEventListener('click',() => {
             console.log('date entered');
         })
         .catch((err) => {
-            console.error(err);
+            console.error(err); 
         })
 
     }

@@ -11,6 +11,7 @@
     <title>Blog : Editor</title>
 </head>
 <body>
+    
     <div class="banner">
         <input type="file" accept="image/*" id="banner-upload" hidden>
         <label for="banner-upload" class="banner-upload-btn">
@@ -28,10 +29,11 @@
         <input type="file" accept="image/*" id="image-upload" hidden>
         <label for="image-upload" class="btn gray upload-btn">Upload Image</label>
         
-        <script src="https://www.gstatic.com/firebasejs/9.12.1/firebase-app.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/9.12.1/firebase-firestore.js"></script>
-        <script src="./firebase.js"></script>
+        <script type="module" src="https://www.gstatic.com/firebasejs/9.12.1/firebase-app.js"></script>
+        <script type="module" src="https://www.gstatic.com/firebasejs/9.12.1/firebase-firestore.js"></script>
+        <script type="module"  src="./firebase.js"></script>
         <script src="./editor.js"></script>
     </div>
+    
 </body>
 </html>

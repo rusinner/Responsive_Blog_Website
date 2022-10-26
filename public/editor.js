@@ -23,8 +23,9 @@ const uploadImage = (uploadFile , uploadType) => {
         fetch('/upload' , {
             method: 'post',
             body:formdata
-        }).then(res => res.json())
-        .then(data => {
+            })
+            .then(res => res.json())
+            .then(data => {
             bannerPath = `${location.origin}/${data}`;
             banner.style.backgroundImage = `url('${bannerPath}')`;
         });

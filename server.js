@@ -20,7 +20,7 @@ app.post('/upload', (req,res) => {
     let file = req.files.image;
     let date = new Date();
     //image name
-    let imageName = date.getDate() = date.getTime() + file.name;
+    let imageName = date.getDate() + date.getTime() + file.name;
     //image upload path
     let path = 'public/uploads/' + imageName;
 

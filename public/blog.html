@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;1,200;1,300;1,600&display=swap" 
+    rel="stylesheet">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="editor.css">
+    <link rel="stylesheet" href="blog.css">
+    <title>Blog :</title>
+</head>
+<body>
+    <nav class="navbar">
+        <img src="./images/logo.svg" class="logo" alt="logo-image">
+        <ul class="links-container">
+            <li class="link-item"><a href="/" class="link">Home</a></li>
+            <li class="link-item"><a href="/editor" class="link">Editor</a></li>
+
+        </ul>
+    </nav>
+
+    <div class="banner"></div>
+
+    <div class="blog">
+        <h1 class="title"></h1>
+        <p class="published"><span>published at -</span> </p>
+        <div class="article">
+            
+        </div>
+    </div>
+
+    <h1 class="sub-heading">Read More</h1>
+
+    <section class="blogs-section">
+        <!-- <div class="blog-card">
+            <img src="./images/article-1.jpg" class="blog-image" alt="blog-image">
+            <h1 class="blog-title">lorem ipsum dolor sit amet consectetur</h1>
+            <p class="blog-overview">Lorem ipsum dolor sit amet consectetur adipisicing
+                                       elit. Temporibus magnam placeat saepe tenetur 
+                                       eligendi dolor sit doloribus ab quae et! 
+            </p>
+            <a href="/" class="btn dark">read</a>
+        </div> -->
+    </section>
+
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.12.1/firebase-app-compat.js" defer></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.12.1/firebase-firestore-compat.js"></script>
+    <script src="./blog.js" defer></script>
+</body>
+</html>

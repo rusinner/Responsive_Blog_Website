@@ -1,3 +1,17 @@
+
+const firebaseConfig = {
+    apiKey: "AIzaSyAD6uBiUiAQ8F7GXBjsOYFpLCH-1sTtBH4",
+    authDomain: "blogging-project-d56c6.firebaseapp.com",
+    projectId: "blogging-project-d56c6",
+    storageBucket: "blogging-project-d56c6.appspot.com",
+    messagingSenderId: "162818225689",
+    appId: "1:162818225689:web:e4f2ac95149581d52b9c88"
+  };
+   const firebaseApp = firebase.initializeApp(firebaseConfig);
+  
+  let db = firebaseApp.firestore();
+
+
 const blogTitleField = document.querySelector('.title');
 const articleField = document.querySelector('.article');
 
@@ -64,7 +78,7 @@ publishBtn.addEventListener('click',() => {
 
         //setting up doc name
         let docName = `${blogTitle}-${id}`;
-        let date = new DataTransfer(); // for published at info
+        let date = new Date(); // for published at info
 
         //acess firestore with db variable
         db.collection('blogs').doc(docName).set({
@@ -74,11 +88,11 @@ publishBtn.addEventListener('click',() => {
             publishedAt:`${date.getDate()} ${months[date.getMonth()]} ${date.getFullYear()}`,
         })
         .then(() => {
-            console.log('date entered');
+            location.href = `/${docName}`;
         })
         .catch((err) => {
             console.error(err); 
         })
 
     }
-})
+});
